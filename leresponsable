@@ -1,0 +1,105 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="index.master.cs" Inherits="projet.index" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+ <title>Home</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/grid_12.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/slider.css">
+    <link href='http://fonts.googleapis.com/css?family=Condiment' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <script src="js/jquery-1.7.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/tms-0.4.x.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider')._TMS({
+                show: 0,
+                pauseOnHover: true,
+                prevBu: false,
+                nextBu: false,
+                playBu: false,
+                duration: 1000,
+                preset: 'fade',
+                pagination: true,
+                pagNums: false,
+                slideshow: 7000,
+                numStatus: true,
+                banners: 'fromRight',
+                waitBannerAnimation: false,
+                progressBar: false
+            })
+        });
+	</script>
+	<!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+   		<script type="text/javascript" src="js/html5.js"></script>
+    	<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+	<![endif]-->
+</head>
+<body>
+  <div class="main">
+  <!--==============================header=================================-->
+    <header>
+    
+        <h2><a href="index.html"></a> <FONT COLOR="white" >Ecole Superieur Vinci</h2></font>
+        <div class="clear"></div>    
+        <nav class="box-shadow">
+            <div>
+                <ul class="menu">
+                    <li class="home-page current"><a href="WebForm2.aspx"><span></span></a></li>
+                    <li></li>
+                    <li><a href="Webform4.aspx">Gestion d'absence</a></li>
+                    <li><a href="WebForm8.aspx"> Gestion d'etudiant</a></li>
+                    <li><a href="clients.html">Statistique</a></li>
+                    
+                </ul>
+               
+                <div class="clear"></div>
+            </div>
+        </nav>
+    </header>   
+  <!--==============================content================================-->
+    <section id="content">
+        <div id="slide" class="box-shadow">		
+            <div class="slider">
+                <ul class="items">
+                    <li><img src="img/slider-1.png" alt="" /><div class="banner"></div></li>
+                    <li><img src="img/slider-2.png" alt="" /><div class="banner"></div></li>
+                    <li><img src="img/slider-3.png" alt="" /><div class="banner"></div></li>
+                </ul>
+            </div>	
+        </div>
+        <div class="container_12">
+          <div class="clear"></div>
+        </div>
+    </section>
+  </div>    
+<!--==============================footer=================================-->
+    
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+          
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
