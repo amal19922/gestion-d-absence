@@ -1,0 +1,108 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="gestionabsence.master.cs" Inherits="projet.gestionabsence" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Home</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/grid_12.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/slider.css">
+    <link href='http://fonts.googleapis.com/css?family=Condiment' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <script src="js/jquery-1.7.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/tms-0.4.x.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider')._TMS({
+                show: 0,
+                pauseOnHover: true,
+                prevBu: false,
+                nextBu: false,
+                playBu: false,
+                duration: 1000,
+                preset: 'fade',
+                pagination: true,
+                pagNums: false,
+                slideshow: 7000,
+                numStatus: true,
+                banners: 'fromRight',
+                waitBannerAnimation: false,
+                progressBar: false
+            })
+        });
+	</script>
+	<!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           &nbsp;</a></div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+   		<script type="text/javascript" src="js/html5.js"></script>
+    	<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+	<![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+<div class="main">
+  <!--==============================header=================================-->
+    <header>
+   <h2> <FONT COLOR="white" >Ecole Superieur Vinci</font></h2>
+        
+        <div class="clear"></div>    
+        <nav class="box-shadow">
+            <div>
+                <ul class="menu">
+                    <li class="home-page current"><a href="WebForm2.aspx"><span></span></a></li>
+                    <li><a href="WebForm4.aspx">Getion d'absence</a></li>
+                    <li><a href="services.html">Gestion d'etudiant</a></li>
+                    <li><a href="projects.html">Statistigue</a></li>
+                   
+                </ul>
+                
+                <div class="clear"></div>
+            </div>
+        </nav>
+    </header>   
+  <!--==============================content================================-->
+    
+            
+                
+          
+                <div class="clear"></div>
+            </div>
+        </div>  
+    </section> 
+  </div>    
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder> 
+         <pre>
+        <div id="moncadre">
+         <center>
+      
+ <font color="white">        <p>              Je soussinge,Monsieur Mohammed chanoun,directeur pédagogique de l'institut supérieur Vinci,
+                     établissement supérieur privé autorisé par le ministère de l'education natinale de l'enseignement
+                     supérieur de la formation des cadres et de la recherche Scientifique sous n° 197/2003,atteste par 
+                         la présente que Mr  <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>,suit ses études à l'institutVinci en <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>année ,
+       filière technologies de l'information sous le numéro d'inscription <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+
+
+                                                                                                   Signature:
+         </p>
+       </font>
+             <asp:Button ID="Button1" runat="server" Text="transfomer en format pdf" 
+                 Height="42px" />
+    </div>
+    
+    </form>
+    
+</body>
+</html>
