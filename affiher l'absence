@@ -1,0 +1,37 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="gestionab.master.cs" Inherits="projet.gestionab" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body text="#00ccff">
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <asp:GridView ID="GridView1" runat="server" Height="173px" 
+            onselectedindexchanged="GridView1_SelectedIndexChanged" Width="227px">
+            <Columns>
+                <asp:BoundField HeaderText="Nom" />
+                <asp:BoundField HeaderText="Prenom" />
+                <asp:BoundField HeaderText="Niveau" />
+                <asp:BoundField HeaderText="Groupe" />
+                <asp:BoundField HeaderText="Date" />
+                <asp:BoundField HeaderText="Matiere" />
+                <asp:BoundField HeaderText="Seance" />
+                <asp:BoundField HeaderText="Ajouter" />
+                <asp:BoundField HeaderText="Modifier" />
+                <asp:BoundField HeaderText="Supprimer" />
+            </Columns>
+    </asp:GridView>
+
+    </div>
+    
+    </form>
+</body>
+</html>
